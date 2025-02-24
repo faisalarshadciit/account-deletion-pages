@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Request Account Deletion</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background-color: #f8f9fa;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    input[type="text"], input[type="email"], textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+    button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .note {
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Request Account Deletion</h1>
+    <p>If you wish to have your account deleted, please fill out the form below. We will process your request and notify you via email.</p>
+    <form action="mailto:your_support_email@example.com" method="POST" enctype="text/plain">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          placeholder="Your full name" 
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Account Email</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          placeholder="Email associated with your account" 
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="reason">Reason for Deletion (Optional)</label>
+        <textarea 
+          id="reason" 
+          name="reason" 
+          rows="4" 
+          placeholder="Let us know if there's a specific reason..."
+        ></textarea>
+      </div>
+      <button type="submit">Submit Request</button>
+    </form>
+    <p class="note">
+      * By submitting this form, you confirm that you want all associated data with this account permanently removed from our systems.
+    </p>
+  </div>
+</body>
+</html>
